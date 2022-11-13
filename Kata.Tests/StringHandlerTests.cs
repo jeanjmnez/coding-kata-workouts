@@ -23,5 +23,12 @@ namespace Kata.Tests
                 return Kata.Console.StringHandler.DoubleChar(s);
             }
         }
+
+        [Test]
+        public void Greet_String_Result()
+        {
+            Assert.AreEqual("Hello boss", Kata.Console.StringHandler.Greet("Daniel", "Daniel"));
+            Assert.AreEqual("Hello guest", Kata.Console.StringHandler.Greet("Greg", "Daniel"));
+        }
     }
 }

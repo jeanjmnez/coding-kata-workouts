@@ -10,6 +10,12 @@ namespace Kata.Console
 
     public static class StringHandler
     {
+        public static string Greet(string name, string owner)
+        {
+
+            var result = name ==owner ? "Hello boss" : "Hello guest";
+             return result;
+        }
         public static string DoubleChar(string s)
         {
             // your code here
@@ -32,5 +38,7 @@ namespace Kata.Console
             
         }
     }
+
+
 
 }

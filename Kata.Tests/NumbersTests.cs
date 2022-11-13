@@ -38,5 +38,14 @@ namespace Kata.Tests
         {
             return Kata.Console.Numbers.PositiveSum(arr);
         }
+
+        [Test]
+        public void Sum_All_Items_Except_Highest_and_Lowest()
+        {
+            Assert.That(Kata.Console.Numbers.Sum(new[] { 6, 2, 1, 8, 10 }), Is.EqualTo(16));
+            Assert.That(Kata.Console.Numbers.Sum(new[] { 6, 2, 1, 8, 10,10 }), Is.EqualTo(27));
+            Assert.That(Kata.Console.Numbers.Sum(new[] { 6, 0, 1, 10,10 }), Is.EqualTo(17));
+            Assert.That(Kata.Console.Numbers.Sum(null), Is.EqualTo(0));
+        }
     }
 }
